@@ -36,8 +36,11 @@
         >
           項目
         </q-item-label>
-        <q-item to = "/">影音</q-item>
-        <q-item to = "/book">書籍</q-item>
+        <q-item to = "/">
+          <q-icon name="home"/>首頁
+        </q-item>
+        <q-item to = "/video"><q-icon name="ion-logo-youtube"/>影音</q-item>
+        <q-item to = "/book"><q-icon name="book"/>書籍</q-item>
       </q-list>
     </q-drawer>
 
