@@ -10,12 +10,16 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-
+        <q-input filled bottom-slots v-model="myKey" label="關鍵字查詢">
+          <template v-slot:append>
+            <q-icon name="search" />
+          </template>
+        </q-input>
         <q-toolbar-title>
           造型氣球
         </q-toolbar-title>
 
-        <div>第1版</div>
+        <div>第1.2版</div>
       </q-toolbar>
     </q-header>
 
@@ -38,7 +42,7 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view :myKey="myKey" />
     </q-page-container>
   </q-layout>
 </template>
@@ -49,6 +53,7 @@ export default {
   name: 'MainLayout',
   data () {
     return {
+      myKey: '',
       leftDrawerOpen: false
     }
   }
